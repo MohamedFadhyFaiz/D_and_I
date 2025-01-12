@@ -4,14 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore Abu Dhabi</title>
+    <!-- Linking CSS for dark mode and improved styling -->
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/app.js" defer></script>
     <script src="assets/js/map.js" defer></script>
+    <style>
+        /* Add dark mode styling */
+        body {
+            background-color: #121212;
+            color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem;
+            background-color: #1e1e1e;
+            border-bottom: 1px solid #333;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #00adb5;
+        }
+
+        header p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: #cccccc;
+        }
+
+        nav {
+            background-color: #1e1e1e;
+            padding: 1rem 0;
+            border-bottom: 1px solid #333;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav a {
+            color: #00adb5;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: #ffd369;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        #filters h2, #places h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #ffd369;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        select {
+            padding: 0.5rem;
+            font-size: 1rem;
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+            border: 1px solid #00adb5;
+            border-radius: 5px;
+        }
+
+        #place-list div {
+            background-color: #1e1e1e;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #1e1e1e;
+            border-top: 1px solid #333;
+            color: #cccccc;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Explore Abu Dhabi</h1>
-        <p>Discover niche, affordable places in Abu Dhabi.</p>
+        <h1>Hidden Gems of Abu Dhabi</h1>
+        <p>
+            Welcome to The Hidden Gems of Abu Dhabi! Discover unique and affordable places near you. 
+            Explore Abu Dhabi beyond the tourist trail! Your ultimate insider’s guide to the city’s hidden gems, niche spots, 
+            and affordable adventures tailored for residents seeking unique and fun experiences!
+        </p>
     </header>
     <nav>
         <ul>
@@ -34,11 +146,23 @@
             <h2>Places</h2>
             <div id="place-list">
                 <!-- Content populated by JavaScript -->
+                <div>
+                    <h3>The Coffee Lab</h3>
+                    <p>Price Range: $</p>
+                    <p>Location: Reem Island</p>
+                    <p>Reviews: Amazing coffee, great for studying.</p>
+                </div>
+                <div>
+                    <h3>Mangrove Walk</h3>
+                    <p>Price Range: $$</p>
+                    <p>Location: Mangrove National Park</p>
+                    <p>Reviews: Beautiful scenery, perfect for kayaking.</p>
+                </div>
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Explore Abu Dhabi</p>
+        <p>&copy; 2025 Hidden Gems of Abu Dhabi. All rights reserved.</p>
     </footer>
 </body>
 </html>
