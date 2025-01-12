@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Abu Dhabi</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/map.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Explore Abu Dhabi</h1>
+        <p>Discover niche, affordable places in Abu Dhabi.</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#places">Places</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="filters">
+            <h2>Filter Places</h2>
+            <label for="price-range">Price Range:</label>
+            <select id="price-range">
+                <option value="all">All</option>
+                <option value="$">$</option>
+                <option value="$$">$$</option>
+                <option value="$$$">$$$</option>
+            </select>
+        </section>
+        <section id="places">
+            <h2>Places</h2>
+            <div id="place-list">
+                <!-- Content populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Explore Abu Dhabi</p>
+    </footer>
+</body>
+</html>
