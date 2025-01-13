@@ -1,8 +1,9 @@
 {
   "name": "Umm Al Emarat Park",
-  "price": "10 AED Per Person",
+  "price": "$",
   "location": "Abu Dhabi",
   "description": "This spacious, vibrant park features a shade house, botanic garden, amphitheater & large open lawn.",
   "latitude": 24.45531022610853,
-  "longitude": 54.38074151334572
+  "longitude": 54.38074151334572,
+  "_comment": "10 AED Per Person"
 }
