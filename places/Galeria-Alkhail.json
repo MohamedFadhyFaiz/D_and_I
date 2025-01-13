@@ -1,1 +1,9 @@
-
+{
+  "name": "Galeria Alkhail",
+  "price": "$$",
+  "location": "Abu Dhabi Equestrian Club event",
+  "timing": "4:00 pm to 1:00 am",
+  "description": "While entry is free, the food is starting from 30 AED",
+  "latitude": 24.529619130936524,
+  "longitude": 54.37908188066699
+}
