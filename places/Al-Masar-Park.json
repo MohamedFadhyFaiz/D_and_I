@@ -1,9 +1,8 @@
 {
   "name": "Al Masar Park",
-  "price": "$",
+  "price": "Free",
   "location": "Masdar City",
   "description": "A a fantastic spot for families and anyone who loves the outdoors. It has spacious walking and bike park, a kids' playground, exercise stations, and plenty of green spaces to relax.",
   "latitude": 24.42983238370591, 
-  "longitude": 54.60612954261018,
-  "_comment": "Free"
+  "longitude": 54.60612954261018
 }
