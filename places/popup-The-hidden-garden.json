@@ -2,7 +2,7 @@
   "name": "The hidden garden",
   "price": "$$",
   "location": "Abu Dhabi City Golf Club",
-  "timing": "4:00 pm - 12:00 pm",
+  "description": "4:00 pm - 12:00 pm",
   "latitude": 24.4479424733798, 
   "longitude": 54.38131572639769
 }
