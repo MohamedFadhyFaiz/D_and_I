@@ -1,8 +1,6 @@
 {
   "name": "Mara lounge",
-  "price": "$$$",
+  "price": 70,
   "location": "Roof top, Abrahamic Family House, Saadiyat Island",
-  "description": "9:00 am - 12:00 am",
-  "latitude": 24.531123690692194,
-  "longitude": 54.405825051831116
+  "description": "9:00 am - 12:00 am"
 }
