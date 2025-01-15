@@ -35,9 +35,14 @@ function renderPlaces(places) {
         const placeDiv = document.createElement('div');
         placeDiv.classList.add('place-item');
         placeDiv.innerHTML = `
-            <h3>${place.name}</h3>
+            <h3><a href="${place.socialLink}" target="_blank" style="color: #ffd369; text-decoration: none;">${place.name}</a></h3>
             <p>Price: ${place.price === 0 ? "Free" : `${place.price} AED`}</p>
-            <p>Location: ${place.location}</p>
+            <p>
+                Location: 
+                <a href="${place.mapLink}" target="_blank" style="color: #00adb5; text-decoration: none;">
+                    ${place.location}
+                </a>
+            </p>
             <p>Description: ${place.description}</p>
         `;
         placeList.appendChild(placeDiv);
