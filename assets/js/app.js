@@ -47,17 +47,23 @@ function renderPlaces(places) {
 function applyFilter() {
     const priceRange = document.getElementById('price-range').value;
 
+    let filteredPlaces;
+
     if (priceRange === "all") {
-        renderPlaces(window.allPlaces); // Show all places if "All" is selected
+        filteredPlaces = window.allPlaces; // Show all places
+    } else if (priceRange.includes("-")) {
+        // Handle range-based filtering (e.g., "0-50", "50-10000")
+        const [minPrice, maxPrice] = priceRange.split("-").map(Number);
+        filteredPlaces = window.allPlaces.filter(
+            (place) => place.price >= minPrice && place.price <= maxPrice
+        );
     } else {
-        const [minPrice, maxPrice] = priceRange.split('-').map(Number);
-
-        const filteredPlaces = window.allPlaces.filter((place) => {
-            return place.price >= minPrice && place.price <= maxPrice;
-        });
-
-        renderPlaces(filteredPlaces); // Show only filtered places
+        // Handle exact price (e.g., "0" for free)
+        const exactPrice = Number(priceRange);
+        filteredPlaces = window.allPlaces.filter((place) => place.price === exactPrice);
     }
+
+    renderPlaces(filteredPlaces); // Display the filtered places
 }
 
 // Attach the filter function to the dropdown change event
