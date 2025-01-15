@@ -1,8 +1,6 @@
 {
   "name": "Trio",
-  "price": "$$",
+  "price": 35,
   "location": "Abrahamic Family House, Saadiyat Island",
-  "description": "5:00 pm - 11:00 pm",
-  "latitude": 24.53098704492227, 
-  "longitude": 54.40577140765203
+  "description": "5:00 pm - 11:00 pm"
 }
