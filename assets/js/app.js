@@ -7,6 +7,7 @@ async function loadPlaces() {
         const response = await fetch('./places/index.json');
         const files = await response.json();
 
+        // Fetch place details and store them
         const places = await Promise.all(
             files.map(async (file) => {
                 const res = await fetch(`./places/${file}`);
@@ -14,10 +15,11 @@ async function loadPlaces() {
             })
         );
 
+        // Save all places globally for filtering
+        window.allPlaces = places;
+
         placeList.innerHTML = ""; // Clear loading text
 
-        // Store places globally for filtering
-        window.allPlaces = places; // Save all places to filter later
         renderPlaces(places); // Render all places initially
     } catch (error) {
         console.error("Error loading places:", error);
@@ -27,14 +29,14 @@ async function loadPlaces() {
 
 function renderPlaces(places) {
     const placeList = document.getElementById('place-list');
-    placeList.innerHTML = ""; // Clear the list before rendering
+    placeList.innerHTML = ""; // Clear previous entries
 
     places.forEach((place) => {
         const placeDiv = document.createElement('div');
         placeDiv.classList.add('place-item');
         placeDiv.innerHTML = `
             <h3>${place.name}</h3>
-            <p>Price Range: ${place.price}</p>
+            <p>Price: ${place.price === 0 ? "Free" : `${place.price} AED`}</p>
             <p>Location: ${place.location}</p>
             <p>Description: ${place.description}</p>
         `;
@@ -48,10 +50,18 @@ function applyFilter() {
     if (priceRange === "all") {
         renderPlaces(window.allPlaces); // Show all places if "All" is selected
     } else {
-        const filteredPlaces = window.allPlaces.filter((place) => place.price === priceRange);
+        const [minPrice, maxPrice] = priceRange.split('-').map(Number);
+
+        const filteredPlaces = window.allPlaces.filter((place) => {
+            return place.price >= minPrice && place.price <= maxPrice;
+        });
+
         renderPlaces(filteredPlaces); // Show only filtered places
     }
 }
+
+// Attach the filter function to the dropdown change event
+document.getElementById('price-range').addEventListener('change', applyFilter);
 
 // Attach event listener to the dropdown
 document.addEventListener('DOMContentLoaded', () => {
