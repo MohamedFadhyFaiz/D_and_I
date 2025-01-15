@@ -1,1 +1,8 @@
-
+{
+  "name": "The Bench",
+  "price": 75,
+  "location": "Crescent Al Raha, Abu Dhabi (7am-12am), Sheikh Zayed Mosque (9am-10pm), The Founder Memorial (4pm-11pm)",
+  "description": "AED 50 - 100",
+  "mapLink": "https://www.google.com/maps/d/u/0/edit?mid=1gZRyeWYxcnT8N9u4eaJrO4hiy3x9m_M&ll=24.463579815482184%2C54.322681132584535&z=19",
+  "socialLink": "https://www.tiktok.com/@marwannn.uae/video/7444604099313601810?_t=ZS-8t3Ig73hbjZ&_r=1"
+}
