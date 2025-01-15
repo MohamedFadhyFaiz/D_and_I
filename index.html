@@ -152,18 +152,8 @@
                 allowfullscreen>
             </iframe>
         </section>
-        <section id="filters">
-            <h2>Filter Places</h2>
-            <label for="price-range">Price Range:</label>
-            <select id="price-range">
-                <option value="all">All</option>
-                <option value="0">Free</option>
-                <option value="0-50">Less than 50 AED</option>
-                <option value="50-10000">50 AED or more</option>
-            </select>
-        </section>
         <section id="places">
-            <h2>Popups</h2>
+            <h2>List of Popups</h2>
             <p>
                 Each place listed below provides detailed information to help you decide where to visit:
                 <ul>
@@ -173,6 +163,15 @@
                     <li><b>Description:</b> A brief overview of what to expect at the location.</li>
                 </ul>
             </p>
+            <section id="filters">
+                <label for="price-range">Price Range:</label>
+                <select id="price-range">
+                    <option value="all">All</option>
+                    <option value="0">Free</option>
+                    <option value="0-50">Less than 50 AED</option>
+                    <option value="50-10000">50 AED or more</option>
+                </select>
+            </section>
             <div id="place-list">
                 <!-- Content populated by JavaScript -->
                 
