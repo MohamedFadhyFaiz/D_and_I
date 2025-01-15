@@ -1,8 +1,6 @@
 {
   "name": "The Rage",
-  "price": "$",
+  "price": 10,
   "location": "Umm Al Emarat Park Event",
-  "description": "4:00 pm to 1:00 am",
-  "latitude": 24.453643704046982, 
-  "longitude": 54.38092422123509
+  "description": "4:00 pm to 1:00 am"
 }
