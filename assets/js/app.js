@@ -37,24 +37,28 @@ function renderPlaces(places) {
         const placeDiv = document.createElement('div');
         placeDiv.classList.add('place-item');
 
-        // Parse the endDate string into a Date object
-        const endDate = new Date(place.endDate);
-
         // Determine the status and ending date message
         let status, endingText;
-        if (currentDate <= endDate) {
-            status = `<span style="color: green;">OPEN</span>`;
-            endingText = `Ends on <b>${endDate.toLocaleDateString()}</b>`;
+        if (place.endDate) {
+            const endDate = new Date(place.endDate);
+            if (currentDate <= endDate) {
+                status = `<span style="color: green;">OPEN</span>`;
+                endingText = `<p>Ends on <b>${endDate.toLocaleDateString()}</b></p>`;
+            } else {
+                status = `<span style="color: red;">CLOSED</span>`;
+                endingText = `<p>Ended on <b>${endDate.toLocaleDateString()}</b></p>`;
+            }
         } else {
-            status = `<span style="color: red;">CLOSED</span>`;
-            endingText = `Ended on <b>${endDate.toLocaleDateString()}</b>`;
+            // For places open year-round
+            status = `<span style="color: green;">OPEN</span>`;
+            endingText = ""; // No "Ends on" or "Ended on" message
         }
 
         // Render the place details
         placeDiv.innerHTML = `
             <h3><a href="${place.socialLink}" target="_blank" style="color: #ffd369; text-decoration: none;">${place.name}</a></h3>
             <p>Status: ${status}</p>
-            <p>${endingText}</p>
+            ${endingText}
             <p>Price: ${place.price === 0 ? "Free" : `${place.price} AED`}</p>
             <p>
                 Location: 
