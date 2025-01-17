@@ -74,18 +74,18 @@
             margin-bottom: 2rem;
         }
 
-        #map-section {
+        #home-section {
             text-align: center;
             margin: 2rem 0;
         }
 
-        #map-section h2 {
+        #home-section h2 {
             color: #ffd369;
             font-size: 2rem;
             margin-bottom: 1rem;
         }
 
-        #map-section iframe {
+        #home-section iframe {
             display: inline-block;
             width: 100%;
             max-width: 1000px;
@@ -95,7 +95,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        #filters h2, #places h2 {
+        #filters h2, #places h2, #suggest-popup h2 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
             color: #ffd369;
@@ -135,6 +135,11 @@
         footer p {
             margin: 0;
         }
+
+        iframe {
+            border: 0;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -144,15 +149,21 @@
             Explore Abu Dhabi's vibrant pop-up events! Our interactive map highlights the city's temporary <b>winter</b> markets, 
             food trucks, art shows, and more. Stay in the loop and discover what's happening near you, all in one place!
         </p>
+        <nav>
+            <ul>
+                <li><a href="#home-section">Home</a></li>
+                <li><a href="#suggest-popup">Popup Not Listed?</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section id="map-section">
+        <!-- Combined Map and List of Popups Section -->
+        <section id="home-section">
+            <h2>Explore Popups</h2>
             <iframe 
                 src="https://www.google.com/maps/d/u/0/embed?mid=1gZRyeWYxcnT8N9u4eaJrO4hiy3x9m_M&ehbc=2E312F&noprof=1" 
                 allowfullscreen>
             </iframe>
-        </section>
-        <section id="places">
             <h2>List of Popups</h2>
             <p>
                 Each place listed below provides detailed information to help you decide where to visit:
@@ -174,8 +185,24 @@
             </section>
             <div id="place-list">
                 <!-- Content populated by JavaScript -->
-                
             </div>
+        </section>
+
+        <!-- Suggest a Popup Section -->
+        <section id="suggest-popup">
+            <h2>Suggest a Popup</h2>
+            <p>
+                Know of a popup event that’s not listed here? Help us keep our guide up to date! Use the form below to submit details about the popup, and we’ll review and add it to the guide.
+            </p>
+            <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSc98nIqFfXn_pnxtU51AAnFpG_C96z0ACUqSahEiGocFTsrfA/viewform?embedded=true" 
+                width="640" 
+	            height="584" 
+	            frameborder="0" 
+	            marginheight="0" 	
+	            marginwidth="0"
+	            >Loading…
+            </iframe>
         </section>
     </main>
     <footer>
