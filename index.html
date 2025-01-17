@@ -95,14 +95,6 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        #home-section p {
-            text-align: left; /* Align text to the left */
-        }
-
-        ul {
-            margin-top: 0.5rem;
-        }
-
         #filters h2, #places h2, #suggest-popup h2 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
@@ -150,12 +142,9 @@
             border-radius: 8px;
         }
 
-        /* Dark mode improvements for Google Form */
-        iframe[src*="docs.google.com"] {
-            background-color: #1e1e1e;
-            color: #f0f0f0;
-            border: 1px solid #333;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        /* Left-align text in #home-section */
+        #home-section p, #home-section ul {
+            text-align: left;
         }
     </style>
 </head>
@@ -184,13 +173,13 @@
             <h2>List of Popups</h2>
             <p>
                 Each place listed below provides detailed information to help you decide where to visit:
-                <ul>
-                    <li><b>Name:</b> Click on the name to visit the popup's social media or content promoting that popup for more insights.</li>
-                    <li><b>Price:</b> Shows the cost of visiting or enjoying the popup.</li>
-                    <li><b>Location:</b> A clickable link that opens the exact location on Google Maps in a new tab.</li>
-                    <li><b>Description:</b> Timings and more information on what to expect with prices.</li>
-                </ul>
             </p>
+            <ul>
+                <li><b>Name:</b> Click on the name to visit the popup's social media or content promoting that popup for more insights.</li>
+                <li><b>Price:</b> Shows the cost of visiting or enjoying the popup.</li>
+                <li><b>Location:</b> A clickable link that opens the exact location on Google Maps in a new tab.</li>
+                <li><b>Description:</b> Timings and more information on what to expect with prices.</li>
+            </ul>
             <section id="filters">
                 <label for="price-range">Price Range:</label>
                 <select id="price-range">
